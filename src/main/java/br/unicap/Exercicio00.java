@@ -33,7 +33,7 @@ public class Exercicio00 {
                                    int numeroIntegrantes, int posicaoRanking) {
         // TODO: Implemente sua solução aqui
         // Dica: Crie um objeto Banda e preencha seus atributos
-        
-        return null; // Substitua esta linha
+        Banda banda = new Banda(nome, tipoMusica, numeroIntegrantes, posicaoRanking);                
+        return banda;
     }
 }

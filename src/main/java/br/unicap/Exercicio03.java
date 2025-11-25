@@ -31,8 +31,39 @@ public class Exercicio03 {
     public static ArrayList<Banda> buscarPorTipo(Banda[] bandas, String tipo) {
         // TODO: Implemente sua solução aqui
         // Dica: Crie um ArrayList<Banda>, percorra o array e adicione as bandas que correspondem
-        
-        return null; // Substitua esta linha
+        ArrayList<Banda> bandasBuscadas = new ArrayList<Banda>();
+
+        for (int i = 0; i < bandas.length; i++) {
+            if (bandas[i].tipoMusica.equalsIgnoreCase(tipo)) {
+                bandasBuscadas.add(bandas[i]);
+            }
+        }
+        return bandasBuscadas; // Substitua esta linha
+    }
+
+    public static Banda[] buscaPorTipoArray(Banda[] bandas, String tipo) {
+        Banda[] bandasBuscadas = new Banda[bandas.length];
+
+        int insertionIndex = 0;
+
+        for (int i = 0; i < bandas.length; i++) {
+            if (bandas[i].tipoMusica.equalsIgnoreCase(tipo)) {
+                bandasBuscadas[insertionIndex] = bandas[i];
+                insertionIndex++;
+            }
+        }
+
+        Banda[] rightSizedBands = new Banda[insertionIndex];
+
+        insertionIndex = 0;
+        for (int i = 0; i < bandasBuscadas.length; i++) {
+            if (bandasBuscadas[i] != null) {
+                rightSizedBands[insertionIndex] = bandasBuscadas[i];
+                insertionIndex++;
+            }
+        }
+
+        return rightSizedBands;
     }
     
     /**
@@ -44,8 +75,14 @@ public class Exercicio03 {
      */
     public static int contarPorTipo(Banda[] bandas, String tipo) {
         // TODO: Implemente sua solução aqui
-        
-        return 0; // Substitua esta linha
+        int count = 0;
+        for (int i = 0; i < bandas.length; i++) {
+            if (bandas[i].tipoMusica.equalsIgnoreCase(tipo)) {
+                count++;
+            }
+        }
+
+        return count; // Substitua esta linha
     }
     
     /**

@@ -33,8 +33,13 @@ public class Exercicio01 {
                                              int[] integrantes, int[] rankings) {
         // TODO: Implemente sua solução aqui
         // Dica: Use um loop for para percorrer os arrays e criar cada banda
-        
-        return null; // Substitua esta linha
+        int thisMuch = nomes.length;
+        Banda[] arrBandas = new Banda[thisMuch];
+        for (int i = 0; i < arrBandas.length; i++) {
+            Banda newBanda = new Banda(nomes[i], tipos[i], integrantes[i], rankings[i]);
+            arrBandas[i] = newBanda;
+        }
+        return arrBandas;
     }
     
     /**
@@ -44,8 +49,7 @@ public class Exercicio01 {
      * @return Quantidade de bandas não-null
      */
     public static int contarBandas(Banda[] bandas) {
-        // TODO: Implemente sua solução aqui
-        
-        return 0; // Substitua esta linha
+        // TODO: Implemente sua solução aqui        
+        return bandas.length; // Substitua esta linha
     }
 }

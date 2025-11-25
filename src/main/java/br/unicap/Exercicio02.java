@@ -30,9 +30,13 @@ public class Exercicio02 {
     public static Banda buscarPorRanking(Banda[] bandas, int posicao) {
         // TODO: Implemente sua solução aqui
         // Dica: Use um loop e compare banda.posicaoRanking com posicao
-        
-        return null; // Substitua esta linha
-    }
+        for (int i = 0; i < bandas.length; i++) {
+            if (bandas[i].posicaoRanking == posicao) {
+                return bandas[i];
+            }
+        }
+        return null;
+    } 
     
     /**
      * Verifica se existe uma banda em determinada posição do ranking
@@ -43,8 +47,12 @@ public class Exercicio02 {
      */
     public static boolean existeRanking(Banda[] bandas, int posicao) {
         // TODO: Implemente sua solução aqui
-        
-        return false; // Substitua esta linha
+        for (int i = 0; i < bandas.length; i++) {
+            if (bandas[i].posicaoRanking == posicao) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 
